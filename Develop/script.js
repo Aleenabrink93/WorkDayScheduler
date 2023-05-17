@@ -38,22 +38,18 @@ function savedEvents(){
 }
 
 //activate save button
-// clear values for past events + alert + reload the page
+// clear values for past events
 $(".saveBtn").on("click",function(event){
   event.preventDefault();
     var input = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
-    if (currentTimeEL<6){
+    if (9<currentTimeEL<17){
     localStorage.setItem(time, input);}
-
+    
     else {
     localStorage.clear();
-    alert("You are trying to schedule event in the past!")
     }
-    location.reload();
-    
-
   });
 
 // print events
@@ -61,9 +57,8 @@ $('#hour9 .description').val(localStorage.getItem("hour9"));
 $('#hour10 .description').val(localStorage.getItem("hour10"));
 $('#hour11 .description').val(localStorage.getItem("hour11"));
 $('#hour12 .description').val(localStorage.getItem("hour12"));
-$('#hour1 .description').val(localStorage.getItem("hour1"));
-$('#hour2 .description').val(localStorage.getItem("hour2"));
-$('#hour3 .description').val(localStorage.getItem("hour3"));
-$('#hour4 .description').val(localStorage.getItem("hour4"));
-$('#hour5 .description').val(localStorage.getItem("hour5"));
-
+$('#hour13 .description').val(localStorage.getItem("hour13"));
+$('#hour14 .description').val(localStorage.getItem("hour14"));
+$('#hour15 .description').val(localStorage.getItem("hour15"));
+$('#hour16 .description').val(localStorage.getItem("hour16"));
+$('#hour17 .description').val(localStorage.getItem("hour17"));
